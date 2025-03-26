@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Management System</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Page -->
+        <div id="login-page" class="login-container">
+            <h2>Exam Management System</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="login-message"></p>
+        </div>
+
+        <!-- Dashboard (Hidden by default) -->
+        <div id="dashboard" class="dashboard" style="display:none;">
+            <div class="sidebar">
+                <h3>Menu</h3>
+                <button class="nav-button" onclick="showSection('profile')">Profile</button>
+                <button class="nav-button" onclick="showSection('create-exam')">Create Exam</button>
+                <button class="nav-button" onclick="showSection('available-exams')">Available Exams</button>
+                <button class="nav-button" onclick="showSection('exam-results')">Exam Results</button>
+                <button class="nav-button" onclick="logout()">Logout</button>
+            </div>
+            
+            <div class="main-content" id="content-area">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
